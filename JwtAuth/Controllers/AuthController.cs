@@ -17,7 +17,7 @@ namespace JwtAuth.Controllers
         [HttpPost("login")]
         public ResponseModel<TokenDto> Login([FromBody] Account account)
         {
-            if (account.Username.Equals("Majd") && account.Password.Equals("123456"))
+            if (account.Username.Equals("Majd123") && account.Password.Equals("123456"))
             {
                 return ResponseModel<TokenDto>.Success(jwtService.GenerateJWTTokens(account.Username));
             }
